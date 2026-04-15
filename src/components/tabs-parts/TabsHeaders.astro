@@ -12,16 +12,14 @@ const PanelNumber = "tabpanel-" + Number;
 	aria-controls={PanelNumber}
 	tabindex="-1"
 	class="btn" >
-	<div class="content">
-		<span class="focus"><h2>{Heading}</h2></span>
-	</div>
+	<h2>{Heading}</h2>
 </button>
 
 <style>
 .btn {
 	position: relative;
 	font: inherit;
-	background-color: var(--color-base-100);
+	background-color: #00000000;
 	color: inherit;
 	border: none;
 	padding: 0;
@@ -29,14 +27,10 @@ const PanelNumber = "tabpanel-" + Number;
 }
 
 .btn:hover .content, .btn:focus .content {
-	color: var(--color-base-100);
 	transition: .3s;
-	background-color: rgba(from var(--color-primary) r g b /.8);
-	border-radius: .5rem;
 }
 
 .btn:focus {
-	outline: 2px solid var(--color-info);
 	outline-offset: 2px;
 }
 

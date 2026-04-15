@@ -1,17 +1,55 @@
 ---
+import Tabs from "../components/tabs-parts/Tabs.astro";
+import TabsHeaders from "../components/tabs-parts/TabsHeaders.astro";
+import TabsPanel from "../components/tabs-parts/TabsPanel.astro";
+
+import Image from "astro/components/Image.astro";
+
+import Header from "../components/sections/Header.astro";
+import Footer from "../components/sections/Footer.astro";
+import PreFooterQuotes from "../components/sections/PreFooterQuotes.astro";
+
+import CEOComments from "../components/sections/CEOComments.astro";
+import FinancialPerformance from "../components/sections/FinancialPerformance.astro";
+import OtherFinancialInformation from "../components/sections/OtherFinancialInformation.astro";
+import ConsolidatedStatementOfProfitOrLoss from "../components/sections/ConsolidatedStatementOfProfitorLoss.astro";
+import ConsolidatedStatementOfComprehensiveIncome from "../components/sections/ConsolidatedStatementOfComprehensiveIncome.astro";
+import ConsolidatedStatementOfFinancialPosition from "../components/sections/ConsolidatedStatementOfFinancialPosition.astro";
+import ConsolidatedStatementOfChangesInEquity from "../components/sections/ConsolidatedStatementOfChanges inEquity.astro";
+import ConsolidatedCashFlowStatement from "../components/sections/ConsolidatedCashFlowStatement.astro";
+import Notes from "../components/sections/Notes.astro";
+import ParentCompanysIncomeStatement from "../components/sections/ParentCompany'sIncomeStatement.astro";
+import DefinitionsOfKeyPerformanceIndicatorsKPIs from "../components/sections/DefinitionsOfKeyPerformanceIndicators(KPIs).astro";
+import SelectedKeyPerformanceIndicators from "../components/sections/SelectedKeyPerformanceIndicators.astro";
+
 
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Coffee Stain Group Interim Report</title>
-	</head>
-	<body>
-	
-	</body>
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="icon" href="/favicon.ico" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="generator" content={Astro.generator} />
+	<title>Coffee Stain Group Interim Report</title>
+
+
+</head>
+<body>
+
+	<Header></Header>
+	<Tabs>
+		<TabsHeaders Heading="Ceo Comments" Number="1" slot="tablist"></TabsHeaders>
+		<TabsPanel Number="1" slot="tabpanels"> <CEOComments> </CEOComments> </TabsPanel>
+
+		<TabsHeaders Heading="Financial Performance" Number="2" slot="tablist"></TabsHeaders>
+		<TabsPanel Number="2" slot="tabpanels"> <FinancialPerformance> </FinancialPerformance> </TabsPanel>
+
+
+	</Tabs>
+	<PreFooterQuotes></PreFooterQuotes>
+	<Footer></Footer>
+
+</body>
 </html>
