@@ -1,0 +1,56 @@
+---
+const { Heading = "Heading", Number } = Astro.props;
+
+const HeadingNumber = "tab-" + Number;
+const PanelNumber = "tabpanel-" + Number;
+---
+<button
+	id={HeadingNumber}
+	type="button"
+	role="tab"
+	aria-selected="false"
+	aria-controls={PanelNumber}
+	tabindex="-1"
+	class="btn" >
+	<div class="content">
+		<span class="focus"><h2>{Heading}</h2></span>
+	</div>
+</button>
+
+<style>
+.btn {
+	position: relative;
+	font: inherit;
+	background-color: var(--color-base-100);
+	color: inherit;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+
+.btn:hover .content, .btn:focus .content {
+	color: var(--color-base-100);
+	transition: .3s;
+	background-color: rgba(from var(--color-primary) r g b /.8);
+	border-radius: .5rem;
+}
+
+.btn:focus {
+	outline: 2px solid var(--color-info);
+	outline-offset: 2px;
+}
+
+h2 {
+	font-size: 1rem;
+	font-weight: normal;
+	padding: .5rem;
+	border-radius: .25rem;
+}
+
+@media (max-width: 400px) {
+	h2 {
+		font-size: .9rem;
+		font-weight: bold;
+	}
+}
+</style>

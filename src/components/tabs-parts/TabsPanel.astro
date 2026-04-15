@@ -1,0 +1,32 @@
+---
+// const { PanelNumber = "tabpanel-2", HeadingNumber = "Tab-2" } = Astro.props;
+const {Number} = Astro.props;
+
+const HeadingNumber = "tab-" + Number;
+const PanelNumber = "tabpanel-" + Number;
+
+---
+
+  <section id={PanelNumber} role="tabpanel" tabindex="0" aria-labelledby={HeadingNumber} class="is-hidden">
+    <slot></slot>
+  </section>
+
+
+  
+  <style>
+
+    [role="tabpanel"] {
+
+      background: var(--color-base-100);
+      min-height: 10em;
+      width: 100%;
+      overflow: auto;
+      z-index: 10;
+      position: relative;
+    }
+
+    [role="tabpanel"].is-hidden {
+        display: none;
+    }
+
+  </style>
