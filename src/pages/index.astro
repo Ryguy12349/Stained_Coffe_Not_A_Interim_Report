@@ -15,7 +15,7 @@ import OtherFinancialInformation from "../components/sections/OtherFinancialInfo
 import ConsolidatedStatementOfProfitOrLoss from "../components/sections/ConsolidatedStatementOfProfitorLoss.astro";
 import ConsolidatedStatementOfComprehensiveIncome from "../components/sections/ConsolidatedStatementOfComprehensiveIncome.astro";
 import ConsolidatedStatementOfFinancialPosition from "../components/sections/ConsolidatedStatementOfFinancialPosition.astro";
-import ConsolidatedStatementOfChangesInEquity from "../components/sections/ConsolidatedStatementOfChanges inEquity.astro";
+import ConsolidatedStatementOfChangesInEquity from "../components/sections/ConsolidatedStatementOfChangesinEquity.astro";
 import ConsolidatedCashFlowStatement from "../components/sections/ConsolidatedCashFlowStatement.astro";
 import Notes from "../components/sections/Notes.astro";
 import ParentCompanysIncomeStatement from "../components/sections/ParentCompany'sIncomeStatement.astro";
@@ -46,7 +46,35 @@ import SelectedKeyPerformanceIndicators from "../components/sections/SelectedKey
 		<TabsHeaders Heading="Financial Performance" Number="2" slot="tablist"></TabsHeaders>
 		<TabsPanel Number="2" slot="tabpanels"> <FinancialPerformance> </FinancialPerformance> </TabsPanel>
 
+		<TabsHeaders Heading="Other Financial Information" Number="3" slot="tablist"></TabsHeaders>
+		<TabsPanel Number="2" slot="tabpanels"> <OtherFinancialInformation> </OtherFinancialInformation> </TabsPanel>
 
+		<TabsHeaders Heading="Consolidated Statement Of Profit Or Loss" Number="4" slot="tablist"/>
+		<TabsPanel Number="4" slot="tabpanels"> <ConsolidatedStatementOfProfitOrLoss> </ConsolidatedStatementOfProfitOrLoss> </TabsPanel>
+
+		<TabsHeaders Heading="Consolidated Statement Of Comprehensive Income" Number="5" slot="tablist"/>
+		<TabsPanel Number="5" slot="tabpanels"> <ConsolidatedStatementOfComprehensiveIncome> </ConsolidatedStatementOfComprehensiveIncome> </TabsPanel>
+
+		<TabsHeaders Heading="Consolidated Statement Of Financial Position" Number="6" slot="tablist"/>
+		<TabsPanel Number="6" slot="tabpanels"> <ConsolidatedStatementOfFinancialPosition> </ConsolidatedStatementOfFinancialPosition> </TabsPanel>
+
+		<TabsHeaders Heading="Consolidated Statement Of Changes In Equity" Number="7" slot="tablist"/>
+		<TabsPanel Number="7" slot="tabpanels"> <ConsolidatedStatementOfChangesInEquity> </ConsolidatedStatementOfChangesInEquity> </TabsPanel>
+
+		<TabsHeaders Heading="Consolidated Cash Flow Statement" Number="8" slot="tablist"/>
+		<TabsPanel Number="8" slot="tabpanels"> <ConsolidatedCashFlowStatement> </ConsolidatedCashFlowStatement> </TabsPanel>
+
+		<TabsHeaders Heading="Notes" Number="9" slot="tablist"/>
+		<TabsPanel Number="9" slot="tabpanels"> <Notes> </Notes> </TabsPanel>
+
+		<TabsHeaders Heading="Parent Companys Income Statement" Number="10" slot="tablist"/>
+		<TabsPanel Number="10" slot="tabpanels"> <ParentCompanysIncomeStatement> </ParentCompanysIncomeStatement> </TabsPanel>
+
+		<TabsHeaders Heading="Definitions Of Key Performance Indicators (KPIs)" Number="11" slot="tablist"/>
+		<TabsPanel Number="11" slot="tabpanels"> <DefinitionsOfKeyPerformanceIndicatorsKPIs> </DefinitionsOfKeyPerformanceIndicatorsKPIs> </TabsPanel>
+
+		<TabsHeaders Heading="Selected Key Performance Indicators" Number="12" slot="tablist"/>
+		<TabsPanel Number="12" slot="tabpanels"> <SelectedKeyPerformanceIndicators> </SelectedKeyPerformanceIndicators> </TabsPanel>
 	</Tabs>
 	<PreFooterQuotes></PreFooterQuotes>
 	<Footer></Footer>
