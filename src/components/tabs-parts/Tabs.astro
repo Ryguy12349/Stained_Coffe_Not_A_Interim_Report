@@ -147,10 +147,8 @@ window.addEventListener('load', function () {
 
 <section class="tl7-tr0-bl0-br7">
   <div class="tabs-wrapper">
-    <div class="header-wrapper">
-      <div role="tablist" aria-labelledby="tablist-1" class="manual">
-        <slot name="tablist"/>
-      </div>
+    <div role="tablist" aria-labelledby="tablist-1" class="manual">
+      <slot name="tablist"/>
     </div>
     <slot name="tabpanels"/>
   </div>
@@ -167,18 +165,13 @@ window.addEventListener('load', function () {
 	padding: 2rem 0;
 }
 
-.header-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  flex-flow: row wrap;
-}
-
 .manual {
-  position: relative;
   display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   gap: 1rem;
+  background-color: var(--color-coffee-dark-grey);
+  padding: 2rem 0;
 }
 
 

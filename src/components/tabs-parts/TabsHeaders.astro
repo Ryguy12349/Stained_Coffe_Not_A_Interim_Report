@@ -17,29 +17,34 @@ const PanelNumber = "tabpanel-" + Number;
 
 <style>
 .btn {
-	position: relative;
-	font: inherit;
-	background-color: #00000000;
-	color: inherit;
+	width: 13rem;
 	border: none;
 	padding: 0;
 	cursor: pointer;
+	background-color: transparent;
+}
+h2 {
+	display: flex;
+	height:100%;
+	margin: 0;
+	font-size: 1rem;
+	font-weight: normal;
+	border-radius: .25rem;
+	color: var(--color-coffee-off-white);
+	text-align: left;
+	padding: .25rem;
 }
 
-.btn:hover .content, .btn:focus .content {
+h2:hover, h2:focus {
+	color: var(--color-coffee-brown);
 	transition: .3s;
 }
 
-.btn:focus {
+h2:focus {
 	outline-offset: 2px;
 }
 
-h2 {
-	font-size: 1rem;
-	font-weight: normal;
-	padding: .5rem;
-	border-radius: .25rem;
-}
+
 
 @media (max-width: 400px) {
 	h2 {

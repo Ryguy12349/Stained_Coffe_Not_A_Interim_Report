@@ -1,14 +1,16 @@
 ---
-import Tabs from "../components/tabs-parts/Tabs.astro";
-import TabsHeaders from "../components/tabs-parts/TabsHeaders.astro";
-import TabsPanel from "../components/tabs-parts/TabsPanel.astro";
+import Layout from "../structure/Layout.astro";
+import Header from "../components/sections/Header.astro";
 
 import Image from "astro/components/Image.astro";
 
-import Header from "../components/sections/Header.astro";
+import Intro from "../components/sections/Intro.astro";
 import Footer from "../components/sections/Footer.astro";
 import PreFooterQuotes from "../components/sections/PreFooterQuotes.astro";
 
+import Tabs from "../components/tabs-parts/Tabs.astro";
+import TabsHeaders from "../components/tabs-parts/TabsHeaders.astro";
+import TabsPanel from "../components/tabs-parts/TabsPanel.astro";
 import CEOComments from "../components/sections/CEOComments.astro";
 import FinancialPerformance from "../components/sections/FinancialPerformance.astro";
 import OtherFinancialInformation from "../components/sections/OtherFinancialInformation.astro";
@@ -25,59 +27,56 @@ import SelectedKeyPerformanceIndicators from "../components/sections/SelectedKey
 
 ---
 
-<html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<link rel="icon" href="/favicon.ico" />
-	<meta name="viewport" content="width=device-width" />
-	<meta name="generator" content={Astro.generator} />
-	<title>Coffee Stain Group Interim Report</title>
-
-
-</head>
-<body>
-
+<Layout>
 	<Header></Header>
-	<Tabs>
-		<TabsHeaders Heading="Ceo Comments" Number="1" slot="tablist"></TabsHeaders>
-		<TabsPanel Number="1" slot="tabpanels"> <CEOComments> </CEOComments> </TabsPanel>
+	<main>
+		<Intro></Intro>
+		<Tabs>
+			<TabsHeaders Heading="Ceo Comments" Number="1" slot="tablist"></TabsHeaders>
+			<TabsPanel Number="1" slot="tabpanels"> <CEOComments> </CEOComments> </TabsPanel>
 
-		<TabsHeaders Heading="Financial Performance" Number="2" slot="tablist"></TabsHeaders>
-		<TabsPanel Number="2" slot="tabpanels"> <FinancialPerformance> </FinancialPerformance> </TabsPanel>
+			<TabsHeaders Heading="Financial Performance" Number="2" slot="tablist"></TabsHeaders>
+			<TabsPanel Number="2" slot="tabpanels"> <FinancialPerformance> </FinancialPerformance> </TabsPanel>
 
-		<TabsHeaders Heading="Other Financial Information" Number="3" slot="tablist"></TabsHeaders>
-		<TabsPanel Number="3" slot="tabpanels"> <OtherFinancialInformation> </OtherFinancialInformation> </TabsPanel>
+			<TabsHeaders Heading="Other Financial Information" Number="3" slot="tablist"></TabsHeaders>
+			<TabsPanel Number="3" slot="tabpanels"> <OtherFinancialInformation> </OtherFinancialInformation> </TabsPanel>
 
-		<TabsHeaders Heading="Consolidated Statement Of Profit Or Loss" Number="4" slot="tablist"/>
-		<TabsPanel Number="4" slot="tabpanels"> <ConsolidatedStatementOfProfitOrLoss> </ConsolidatedStatementOfProfitOrLoss> </TabsPanel>
+			<TabsHeaders Heading="Consolidated Statement Of Profit Or Loss" Number="4" slot="tablist"/>
+			<TabsPanel Number="4" slot="tabpanels"> <ConsolidatedStatementOfProfitOrLoss> </ConsolidatedStatementOfProfitOrLoss> </TabsPanel>
 
-		<TabsHeaders Heading="Consolidated Statement Of Comprehensive Income" Number="5" slot="tablist"/>
-		<TabsPanel Number="5" slot="tabpanels"> <ConsolidatedStatementOfComprehensiveIncome> </ConsolidatedStatementOfComprehensiveIncome> </TabsPanel>
+			<TabsHeaders Heading="Consolidated Statement Of Comprehensive Income" Number="5" slot="tablist"/>
+			<TabsPanel Number="5" slot="tabpanels"> <ConsolidatedStatementOfComprehensiveIncome> </ConsolidatedStatementOfComprehensiveIncome> </TabsPanel>
 
-		<TabsHeaders Heading="Consolidated Statement Of Financial Position" Number="6" slot="tablist"/>
-		<TabsPanel Number="6" slot="tabpanels"> <ConsolidatedStatementOfFinancialPosition> </ConsolidatedStatementOfFinancialPosition> </TabsPanel>
+			<TabsHeaders Heading="Consolidated Statement Of Financial Position" Number="6" slot="tablist"/>
+			<TabsPanel Number="6" slot="tabpanels"> <ConsolidatedStatementOfFinancialPosition> </ConsolidatedStatementOfFinancialPosition> </TabsPanel>
 
-		<TabsHeaders Heading="Consolidated Statement Of Changes In Equity" Number="7" slot="tablist"/>
-		<TabsPanel Number="7" slot="tabpanels"> <ConsolidatedStatementOfChangesInEquity> </ConsolidatedStatementOfChangesInEquity> </TabsPanel>
+			<TabsHeaders Heading="Consolidated Statement Of Changes In Equity" Number="7" slot="tablist"/>
+			<TabsPanel Number="7" slot="tabpanels"> <ConsolidatedStatementOfChangesInEquity> </ConsolidatedStatementOfChangesInEquity> </TabsPanel>
 
-		<TabsHeaders Heading="Consolidated Cash Flow Statement" Number="8" slot="tablist"/>
-		<TabsPanel Number="8" slot="tabpanels"> <ConsolidatedCashFlowStatement> </ConsolidatedCashFlowStatement> </TabsPanel>
+			<TabsHeaders Heading="Consolidated Cash Flow Statement" Number="8" slot="tablist"/>
+			<TabsPanel Number="8" slot="tabpanels"> <ConsolidatedCashFlowStatement> </ConsolidatedCashFlowStatement> </TabsPanel>
 
-		<TabsHeaders Heading="Notes" Number="9" slot="tablist"/>
-		<TabsPanel Number="9" slot="tabpanels"> <Notes> </Notes> </TabsPanel>
+			<TabsHeaders Heading="Notes" Number="9" slot="tablist"/>
+			<TabsPanel Number="9" slot="tabpanels"> <Notes> </Notes> </TabsPanel>
 
-		<TabsHeaders Heading="Parent Companys Income Statement" Number="10" slot="tablist"/>
-		<TabsPanel Number="10" slot="tabpanels"> <ParentCompanysIncomeStatement> </ParentCompanysIncomeStatement> </TabsPanel>
+			<TabsHeaders Heading="Parent Companys Income Statement" Number="10" slot="tablist"/>
+			<TabsPanel Number="10" slot="tabpanels"> <ParentCompanysIncomeStatement> </ParentCompanysIncomeStatement> </TabsPanel>
 
-		<TabsHeaders Heading="Definitions Of Key Performance Indicators (KPIs)" Number="11" slot="tablist"/>
-		<TabsPanel Number="11" slot="tabpanels"> <DefinitionsOfKeyPerformanceIndicatorsKPIs> </DefinitionsOfKeyPerformanceIndicatorsKPIs> </TabsPanel>
+			<TabsHeaders Heading="Definitions Of KPIs, Key Performance Indicators" Number="11" slot="tablist"/>
+			<TabsPanel Number="11" slot="tabpanels"> <DefinitionsOfKeyPerformanceIndicatorsKPIs> </DefinitionsOfKeyPerformanceIndicatorsKPIs> </TabsPanel>
 
-		<TabsHeaders Heading="Selected Key Performance Indicators" Number="12" slot="tablist"/>
-		<TabsPanel Number="12" slot="tabpanels"> <SelectedKeyPerformanceIndicators> </SelectedKeyPerformanceIndicators> </TabsPanel>
-	</Tabs>
+			<TabsHeaders Heading="Selected Key Performance Indicators" Number="12" slot="tablist"/>
+			<TabsPanel Number="12" slot="tabpanels"> <SelectedKeyPerformanceIndicators> </SelectedKeyPerformanceIndicators> </TabsPanel>
+		</Tabs>
+	</main>
 	<PreFooterQuotes></PreFooterQuotes>
 	<Footer></Footer>
+</Layout>
 
-</body>
-</html>
+<style>
+	main {
+		display:flex;
+		flex-direction: column;
+
+	}
+</style>
