@@ -142,15 +142,36 @@ window.addEventListener('load', function () {
   }
 });
 
+const menuBtn = document.querySelector("#toggle_mobile_tabs_menu");
+const menu = document.querySelector(".manual");
+
+menuBtn.addEventListener("click", function () {
+  if(menu.classList.contains('toggle_menu')) {
+    menu.classList.remove('toggle_menu')
+  } else {
+    menu.classList.add('toggle_menu')
+  }
+});
+
 </script>
 
 
-<section class="tl7-tr0-bl0-br7">
+<section class="tabs-section">
   <div class="tabs-wrapper">
-    <div role="tablist" aria-labelledby="tablist-1" class="manual">
-      <slot name="tablist"/>
+    <div class="manual-wrapper">
+      <div class="mobile_tabs_menu">
+        <h2>Detailed Report</h2>
+        <button id="toggle_mobile_tabs_menu" aria-label="Toggle Detailed Report Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M144-264v-72h672v72H144Zm0-180v-72h672v72H144Zm0-180v-72h672v72H144Z"/></svg>
+        </button>
+      </div>
+      <div role="tablist" aria-labelledby="tablist-1" class="manual toggle_menu">
+        <slot name="tablist"/>
+      </div>
     </div>
-    <slot name="tabpanels"/>
+    <div class="tabpanel-wrapper">
+      <slot name="tabpanels"/>
+    </div>
   </div>
 </section>
         
@@ -158,21 +179,74 @@ window.addEventListener('load', function () {
 
 <style>
 
+.tabs-section {
+  margin-top: 6rem;
+}
+
 .tabs-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-	padding: 2rem 0;
+}
+
+.manual-wrapper{
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-coffee-dark-grey);
 }
 
 .manual {
+  max-width: 800px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
   gap: 1rem;
-  background-color: var(--color-coffee-dark-grey);
-  padding: 2rem 0;
+  padding-bottom: .5rem;
 }
 
+.mobile_tabs_menu {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--color-coffee-dark-grey);
+}
+
+.mobile_tabs_menu h2 {
+  color: var(--color-coffee-off-white);
+  padding: .5rem .5rem;
+  margin:0;
+}
+
+#toggle_mobile_tabs_menu{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-coffee-off-white)
+}
+
+#toggle_mobile_tabs_menu:focus {
+  outline: 2px solid var(--color-coffee-off-white);
+  outline-offset: 2px;
+}
+
+#toggle_mobile_tabs_menu:hover, #toggle_mobile_tabs_menu:focus {
+  color: var(--color-coffee-brown);
+  transition: .3s;
+}
+
+#toggle_mobile_tabs_menu svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.toggle_menu {
+  display: none;
+}
 
 </style>

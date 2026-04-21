@@ -1,19 +1,66 @@
 ---
 import TextContainer from '../TextContainer.astro';
 ---
-<TextContainer>
-    <h2 class="c52 c39 c43" id="h.eh4mof13ug7v"><span class="c27">Signatures And Assurance</span></h2>
-    <p class="c7"><span class="c1">The Board of Directors and Chief Executive Officer offer their assurance that this interim report for the third quarter gives a true and fair view of the Group&rsquo;s and parent company&rsquo;s operations, financial position and results of operations and describes the significant risks and uncertainties facing the Group and the parent company.</span></p>
-    <p class="c7"><span class="c1">Karlstad, Sweden, February 4, 2026 </span></p>
-    <p class="c7"><span class="c1">Jacob Jonmyren: Chair of the Board </span></p>
-    <p class="c7"><span class="c1">Lars Wingefors: Board member</span></p>
-    <p class="c7"><span class="c1">Kicki Wallje-Lund: Board member</span></p>
-    <p class="c7"><span class="c1">Sara B&ouml;rsvik: Board member</span></p>
-    <p class="c7"><span class="c1">Henrik Tj&auml;rnstr&ouml;m: Board member</span></p>
-    <p class="c7"><span class="c1">Anton Westbergh: CEO and Board member</span></p>
-    <p class="c7"><span class="c15">This information is information that Coffee Stain Group AB (publ) is obliged to make public pursuant to the EU Market Abuse Regulation 596/2014. The information was submitted for publication, through the agency of the contact persons set out above, at 2026-02-04, 08:00 CET. The persons above may also be contacted for further information.</span></p>
-    <p class="c7"><span class="c15">This report contains forward-looking statements that reflect the Board of Directors&rsquo; and management&rsquo;s current views with respect to certain future events and potential financial performance. Forward-looking statements are subject to risks and uncertainties. Results could differ materially from forward-looking statements as a result of, among other factors, (i) changes in economic, market and competitive conditions, (ii) success of business initiatives, (iii) changes in the regulatory environment and other government actions, (iv) fluctuations in exchange rates and (v) business risk management. </span></p>
-    <p class="c7"><span class="c75">This report is based solely on the circumstances at the date of publication and except to the extent required under applicable law or applicable marketplace regulations, Coffee Stain Group AB is under no obligation to update the information, opinions or forward-looking statements in this report. </span>
-        <hr style="page-break-before:always;display:none;">
-    </p>
-</TextContainer>
+<section class="signatures_assurance_section">
+    <div class="signatures_assurance_section-wrapper">
+        <h2 class="" id="">Signatures And Assurance</h2>
+        <div class="signature-section">   
+            <h3>Signatures</h3>
+            <p class="">The Board of Directors and Chief Executive Officer offer their assurance that this interim report for the third quarter gives a true and fair view of the Group&rsquo;s and parent company&rsquo;s operations, financial position and results of operations and describes the significant risks and uncertainties facing the Group and the parent company.</p>
+            <p class="">Karlstad, Sweden, February 4, 2026 </p>
+            <div class="signatures-grid">
+                <p class=""><strong>Jacob Jonmyren:</strong><br/> Chair of the Board </p>
+                <p class=""><strong>Lars Wingefors:</strong><br/> Board member</p>
+                <p class=""><strong>Kicki Wallje-Lund:</strong><br/> Board member</p>
+                <p class=""><strong>Sara B&ouml;rsvik:</strong><br/> Board member</p>
+                <p class=""><strong>Henrik Tj&auml;rnstr&ouml;m:</strong><br/> Board member</p>
+                <p class=""><strong>Anton Westbergh:</strong><br/> CEO and Board member</p>
+            </div>
+        </div>
+        <div class="assurance-section">
+            <h3>Assurance</h3>
+            <p class="">This information is information that Coffee Stain Group AB (publ) is obliged to make public pursuant to the EU Market Abuse Regulation 596/2014. The information was submitted for publication, through the agency of the contact persons set out above, at 2026-02-04, 08:00 CET. The persons above may also be contacted for further information.</p>
+            <p class="">This report contains forward-looking statements that reflect the Board of Directors&rsquo; and management&rsquo;s current views with respect to certain future events and potential financial performance. Forward-looking statements are subject to risks and uncertainties. Results could differ materially from forward-looking statements as a result of, among other factors, (i) changes in economic, market and competitive conditions, (ii) success of business initiatives, (iii) changes in the regulatory environment and other government actions, (iv) fluctuations in exchange rates and (v) business risk management. </p>
+            <p class="">This report is based solely on the circumstances at the date of publication and except to the extent required under applicable law or applicable marketplace regulations, Coffee Stain Group AB is under no obligation to update the information, opinions or forward-looking statements in this report. </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .signatures_assurance_section {
+        margin: 6rem auto 0;
+        padding: .5rem .5rem 2rem;
+        background-color: var(--color-coffee-dark-grey);
+    }
+
+    .signatures_assurance_section h2 {
+        margin-top: 0;
+    }
+
+    .signatures_assurance_section-wrapper {
+        max-width: 800px;
+        margin: 0 auto 0;
+    }
+
+    .signature-section h3, .assurance-section h3 {
+        margin-bottom: .5rem;
+    }
+
+    .signature-section p {
+        margin: .25rem 0;
+        color: var(--color-coffee-off-white);
+    }
+
+    .signatures-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: .5rem;
+        margin-top: 1rem;
+    }
+
+    .assurance-section p {
+        font-size: 0.875rem;
+        margin: 0 0 .375rem 0;
+        color: var(--color-coffee-white);
+    }
+</style>

@@ -2,14 +2,31 @@
 import TextContainer from '../TextContainer.astro';
 ---
 <TextContainer>
-<p class="">
-    Coffee Stain Group is a Scandinavian game developer and publisher with a portfolio 
-    of community-driven games primarily for PC and console and a proven track record 
-    of building intellectual properties including Goat Simulator, Satisfactory, 
-    Deep Rock Galactic, Valheim, Teardown and Welcome to Bloxburg. The Group consists 
-    of 250 employees in 13 game studios including Coffee Stain, Ghost Ship and Tuxedo 
-    Labs - all united by the aspiration of &quot;
-    <em>small teams</em> &nbsp;making <em>big games</em>
-    &nbsp;for <em>huge audiences</em>&quot;
-</p>
+    <div class="pre-footer-quote-wrapper">
+        <p class="pre-footer-quote">
+            Coffee Stain Group is a Scandinavian game developer and publisher with a portfolio 
+            of community-driven games primarily for PC and console and a proven track record 
+            of building intellectual properties including Goat Simulator, Satisfactory, 
+            Deep Rock Galactic, Valheim, Teardown and Welcome to Bloxburg. The Group consists 
+            of 250 employees in 13 game studios including Coffee Stain, Ghost Ship and Tuxedo 
+            Labs - all united by the aspiration of &quot;
+            <strong>small teams</strong> &nbsp;making <strong>big games</strong>
+            &nbsp;for <strong>huge audiences</strong>&quot;
+        </p>
+    </div>
 </TextContainer>
+
+<style>
+    .pre-footer-quote {
+        font-family: var(--font-family-orgon-medium);
+        font-size: 1.25rem;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .pre-footer-quote-wrapper {
+        margin-top: 6rem;
+        background-color: var(--color-coffee-tan);
+        padding: 1.5rem;
+    }
+</style>
