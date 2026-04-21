@@ -153,6 +153,16 @@ menuBtn.addEventListener("click", function () {
   }
 });
 
+var tabBtn = document.querySelectorAll('[role=tab].btn')
+for (var i =0; i < tabBtn.length; i++) {
+tabBtn[i].addEventListener("click", function () {
+  if(menu.classList.contains('toggle_menu')) {
+    menu.classList.remove('toggle_menu')
+  } else {
+    menu.classList.add('toggle_menu')
+  }
+})};
+
 </script>
 
 
