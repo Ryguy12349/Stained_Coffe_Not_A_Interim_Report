@@ -16,71 +16,69 @@ import TextContainer from '../TextContainer.astro';
     <h3 class="c7 c43" id="h.2xgro5biosd"><span class="c28">Note 3: Revenue From Contracts With Customers</span></h3>
     <p class="c7"><span class="c1">Return to Note 3 reference</span></p>
 </TextContainer>
-    <table class="c9">
-        <tr class="c2">
-            <td class="c55" colspan="1" rowspan="1">
-                <p class="c0"><span class="c1">Revenue from contracts with customers </span></p>
-            </td>
-            <td class="c45" colspan="1" rowspan="1">
-                <p class="c0"><span class="c1">Oct-Dec 2025</span></p>
-            </td>
-            <td class="c13" colspan="1" rowspan="1">
-                <p class="c0"><span class="c1">Oct-Dec 2024</span></p>
-            </td>
-            <td class="c13" colspan="1" rowspan="1">
-                <p class="c0"><span class="c1">Apr-Dec 2025</span></p>
-            </td>
-            <td class="c65" colspan="1" rowspan="1">
-                <p class="c0"><span class="c1">Apr-Dec 2024</span></p>
-            </td>
-            <td class="c37" colspan="1" rowspan="1">
-                <p class="c0"><span class="c1">Apr 2024- Mar 2025</span></p>
-            </td>
-        </tr>
-        <tr class="c2">
-            <td class="c55" colspan="1" rowspan="1">
-                <p class="c0"><span class="c1">PC/Console </span></p>
-            </td>
-            <td class="c45" colspan="1" rowspan="1">
-                <p class="c0"><span class="c1">257 </span></p>
-            </td>
-            <td class="c13" colspan="1" rowspan="1">
-                <p class="c0"><span class="c1">334 </span></p>
-            </td>
-            <td class="c13" colspan="1" rowspan="1">
-                <p class="c0"><span class="c1">583 </span></p>
-            </td>
-            <td class="c65" colspan="1" rowspan="1">
-                <p class="c0"><span class="c1">711 </span></p>
-            </td>
-            <td class="c37" colspan="1" rowspan="1">
-                <p class="c0"><span class="c1">873 </span></p>
-            </td>
-        </tr>
-        <tr class="c2">
-            <td class="c55" colspan="1" rowspan="1">
-                <p class="c0"><span class="c1">Total</span></p>
-            </td>
-            <td class="c45" colspan="1" rowspan="1">
-                <p class="c0"><span class="c1">293</span></p>
-            </td>
-            <td class="c13" colspan="1" rowspan="1">
-                <p class="c0"><span class="c1">389 </span></p>
-                <p class="c0 c19"><span class="c1"></span></p>
-            </td>
-            <td class="c13" colspan="1" rowspan="1">
-                <p class="c0"><span class="c1">701 </span></p>
-            </td>
-            <td class="c65" colspan="1" rowspan="1">
-                <p class="c0"><span class="c1">873 </span></p>
-            </td>
-            <td class="c37" colspan="1" rowspan="1">
-                <p class="c0"><span class="c1">1,089</span></p>
-            </td>
-        </tr>
+    <div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Revenue from contracts with customers</th>
+                <th scope="col">Oct-Dec 2025</th>
+                <th scope="col">Oct-Dec 2024</th>
+                <th scope="col">Apr-Dec 2025</th>
+                <th scope="col">Apr-Dec 2024</th>
+                <th scope="col">Apr 2024- Mar 2025</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">PC/Console</th>
+                <td>257</td>
+                <td>334</td>
+                <td>583</td>
+                <td>711</td>
+                <td>873</td>
+            </tr>
+            <tr>
+                <th scope="row">Total</th>
+                <td>293</td>
+                <td>389</td>
+                <td>701</td>
+                <td>873</td>
+                <td>1,089</td>
+            </tr>
+        </tbody>
     </table>
+</div>
 <TextContainer>
     <p class="c7"><span>PC/console comprises sales from titles distributed through platforms such as Steam, PlayStation and Xbox. Other platforms includes revenue generated through platforms with differing revenue models and user dynamics, such as Roblox and Mobile platforms. </span>
         <hr style="page-break-before:always;display:none;">
     </p>
 </TextContainer>
+<style>
+
+    .table-container {
+        max-width: 800px;
+        margin-top: 6rem;
+        overflow: auto;
+    }
+
+    th {
+        text-align: left;
+    }
+
+    th, td {
+        padding:.25rem;
+    }
+
+    thead th{
+        position: sticky;
+        top: 0;
+    }
+
+    tbody th {
+        width: 16rem;
+        position: sticky;
+        left: .25rem; /* 0 + padding */
+        background-color: var(--color-coffee-off-white);
+    }
+
+</style>
