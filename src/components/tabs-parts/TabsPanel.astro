@@ -17,7 +17,8 @@ const PanelNumber = "tabpanel-" + Number;
 
     [role="tabpanel"] {
       min-height: 10em;
-      width: 100vw;
+      width: 100%;
+      max-width: calc(100vw - .6875rem);
       overflow: auto;
       z-index: 10;
       position: relative;

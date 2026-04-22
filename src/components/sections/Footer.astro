@@ -1,5 +1,6 @@
 ---
 import TextContainer from '../TextContainer.astro';
+import Form from './Form.astro';
 ---
 <section class="signatures_assurance_section">
     <div class="signatures_assurance_section-wrapper">
@@ -23,6 +24,7 @@ import TextContainer from '../TextContainer.astro';
             <p class="">This report contains forward-looking statements that reflect the Board of Directors&rsquo; and management&rsquo;s current views with respect to certain future events and potential financial performance. Forward-looking statements are subject to risks and uncertainties. Results could differ materially from forward-looking statements as a result of, among other factors, (i) changes in economic, market and competitive conditions, (ii) success of business initiatives, (iii) changes in the regulatory environment and other government actions, (iv) fluctuations in exchange rates and (v) business risk management. </p>
             <p class="">This report is based solely on the circumstances at the date of publication and except to the extent required under applicable law or applicable marketplace regulations, Coffee Stain Group AB is under no obligation to update the information, opinions or forward-looking statements in this report. </p>
         </div>
+        <Form/>
     </div>
 </section>
 
@@ -53,7 +55,7 @@ import TextContainer from '../TextContainer.astro';
 
     .signatures-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         gap: .5rem;
         margin-top: 1rem;
     }

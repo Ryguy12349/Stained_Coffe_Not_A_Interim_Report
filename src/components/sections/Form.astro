@@ -1,0 +1,89 @@
+---
+
+---
+
+<script>
+    const opBtn = document.querySelector("#open_form");
+    const clBtn = document.querySelector("#close_form");
+    const form = document.querySelector("#form_container");
+
+    opBtn.addEventListener("click", function () {
+        form.classList.add('open')
+    });
+
+    clBtn.addEventListener("click", function () {
+        form.classList.remove('open')
+    });
+
+</script>
+
+<section class="email-form">
+    <button id="open_form" >
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+    </button>
+    <div id="form_container">
+        <button id="close_form"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+        <h2>Send us a Message</h2>
+        <form name="contact" method="POST">
+            <div class="contact-sender-info">
+                <div class="contact-name-box">
+                    <label for="name" class="contact-label">Name:</label>
+                    <input type="text" id="name" name="name" class="contact-input" required>
+                </div>
+                <div class="contact-email-box">
+                    <label for="email" class="contact-label">Email:</label>
+                    <input type="email" id="email" name="email" class="contact-input" required>
+                </div>
+            </div>
+            <div class="contact-message-box">
+                <label for="message" class="contact-label">Message:</label>
+                <textarea id="message" name="message" rows="4" class="contact-input" required></textarea>
+            </div>
+            <div class="contact-submit-box">
+                <input type="submit" id="submit" value="Submit">
+            </div>
+        </form>  
+    </div>
+</section>
+
+<style>
+    .open {
+        display: flex !important;
+
+    }
+
+    #form_container {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 20000000;
+        top: 0;
+        left: 0;
+        background-color: var(--color-coffee-dark-grey);
+        flex-direction: column;
+    }
+
+    button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:focus {
+        outline: 2px solid var(--color-coffee-off-white);
+        outline-offset: 2px;
+    }
+
+    button:hover, button:focus {
+        color: var(--color-coffee-brown);
+        transition: .3s;
+    }
+
+    button svg {
+        fill: var(--color-coffee-off-white);
+        width: 2rem;
+        height: 2rem;
+    }
+
+</style>
