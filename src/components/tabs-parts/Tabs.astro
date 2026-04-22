@@ -154,19 +154,22 @@ menuBtn.addEventListener("click", function () {
 });
 
 var tabBtn = document.querySelectorAll('[role=tab].btn')
+const tabsSection = document.querySelector("#tabs-section")
 for (var i =0; i < tabBtn.length; i++) {
 tabBtn[i].addEventListener("click", function () {
   if(menu.classList.contains('toggle_menu')) {
     menu.classList.remove('toggle_menu')
+    tabsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   } else {
     menu.classList.add('toggle_menu')
+    tabsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 })};
 
 </script>
 
 
-<section class="tabs-section">
+<section id="tabs-section">
   <div class="tabs-wrapper">
     <div class="manual-wrapper">
       <div class="mobile_tabs_menu">
@@ -189,7 +192,7 @@ tabBtn[i].addEventListener("click", function () {
 
 <style>
 
-.tabs-section {
+#tabs-section {
   margin-top: 6rem;
 }
 

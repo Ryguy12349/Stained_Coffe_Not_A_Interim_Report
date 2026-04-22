@@ -17,6 +17,8 @@
         --font-family-orgon-regular: 'Orgon W03 Regular', sans-serif;
         --font-family-orgon-medium: 'Orgon W03 Medium', sans-serif;
         --font-family-orgon-black: 'Orgon W03 Black', sans-serif;
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-coffee-brown) #00000000;
     }
 
     body {
@@ -46,8 +48,15 @@
     }
 
     .table-container {
+        width: 100%;
         max-width: 800px;
         overflow: auto;
+    }
+
+    caption {
+        position: sticky;
+        left: 0;
+        width: calc(100vw - 1rem)
     }
 
     table{
@@ -60,6 +69,7 @@
 
     th, td {
         padding:.25rem .25rem .5rem;
+        width: 16rem;
     }
 
     thead th{
@@ -69,15 +79,16 @@
     }
 
     tbody th {
-        width: 16rem;
         position: sticky;
-        left: .25rem; /* 0 + padding */
+        left: 0; /* 0 + padding */
         background-color: var(--color-coffee-off-white);
+        border-right: 1px dotted var(--color-coffee-dark-grey);
     }
 
     @media (max-width: 620px) {
         .table-container {
             overflow-x: scroll;
+            scrollbar-gutter: stable;
         }  
     }
 </style>
